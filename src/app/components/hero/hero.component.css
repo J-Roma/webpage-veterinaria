@@ -1,0 +1,15 @@
+.bg-banner {
+    position: relative;
+}
+.bg-banner img {
+    width: 100%;
+}
+
+.bg-banner .bg-banner-content {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 7%;
+}
