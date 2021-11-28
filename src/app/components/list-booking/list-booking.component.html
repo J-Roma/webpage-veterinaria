@@ -1,0 +1,52 @@
+<div class="container mt-5 mb-5 has-background-light">
+  <div class="tabs is-boxed">
+    <ul>
+      <li class="">
+        <a href="/consultas">
+          <span class="icon is-small"
+            ><i class="fas fa-image" aria-hidden="true"></i
+          ></span>
+          <span>Reservar</span>
+        </a>
+      </li>
+      <li class="is-active">
+        <a>
+          <span class="icon is-small"
+            ><i class="fas fa-music" aria-hidden="true"></i
+          ></span>
+          <span>Agenda</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="notification">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Tipo Consulta</th>
+            <th>Descripcion</th>
+            <th>Especie</th>
+            <th>Creacion</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let element of citas.data">
+            <td>{{ element.userName }}</td>
+            <td>{{ element.fecha }}</td>
+            <td>{{ element.hora }}</td>
+            <td>{{ element.tipoConsulta }}</td>
+            <td>{{ element.desSintomas }}</td>
+            <td>{{ element.especie }}</td>
+            <td>{{ element.createAt }}</td>
+            <td><Button class="button">Eliminar</Button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

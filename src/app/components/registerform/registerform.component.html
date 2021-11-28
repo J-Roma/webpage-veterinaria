@@ -1,0 +1,40 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <div class="container section is-medium">
+    <div class="field">
+      <label class="label">Usuario</label>
+      <div class="control">
+        <input
+          class="input"
+          type="text"
+          placeholder="Usuarios"
+          formControlName="username"
+        />
+      </div>
+    </div>
+    <div class="email">
+      <label class="label">Correo</label>
+      <div class="control">
+        <input
+          class="input"
+          type="email"
+          placeholder="Correo"
+          formControlName="email"
+        />
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Contraseña</label>
+      <div class="control">
+        <input
+          class="input"
+          type="text"
+          placeholder="Contraseña"
+          formControlName="password"
+        />
+      </div>
+    </div>
+    <button class="button" type="submit" [disabled]="!profileForm.valid">
+      Registrar
+    </button>
+  </div>
+</form>
