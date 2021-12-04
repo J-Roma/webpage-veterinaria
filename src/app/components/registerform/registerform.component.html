@@ -33,7 +33,12 @@
         />
       </div>
     </div>
-    <button class="button" type="submit" [disabled]="!profileForm.valid">
+    <button
+      class="button"
+      type="submit"
+      [disabled]="!profileForm.valid"
+      [swal]="['Exito!', 'Has Sido Registrado', 'success']"
+    >
       Registrar
     </button>
   </div>
