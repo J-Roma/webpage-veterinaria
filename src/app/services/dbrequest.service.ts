@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from "rxjs";
 import { Request } from "./interfaces/request";
-import { Citas } from "../../app/models/cita.intrerface";
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +15,7 @@ export class DbrequestService {
   }
 
   addNewCita(request: Request){
-    return this.http.post(`${this.baseUrl}/cita/create`, request);
+    return this.http.post(`${this.baseUrl}/cita/create/`, request);
   }
 
   getCitas() {

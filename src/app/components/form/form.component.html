@@ -1,3 +1,13 @@
+<swal
+  #success
+  title="Exito!"
+  text="Se agendo la cita"
+  icon="success"
+  [showCancelButton]="true"
+  [focusCancel]="true"
+>
+</swal>
+
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <div class="container mt-5 mb-5 has-background-light">
     <div class="tabs is-boxed">
@@ -109,13 +119,8 @@
 
       <div class="field is-grouped">
         <div class="control">
-          <button
-            class="button is-link"
-            type="submit"
-            [disabled]="!profileForm.valid"
-            [swal]="['Exito!', 'Tu reserva ha sido agendada', 'success']"
-          >
-            Reserar
+          <button class="button is-link" type="submit" (click)="success.fire()">
+            Reservar
           </button>
         </div>
         <div class="control">

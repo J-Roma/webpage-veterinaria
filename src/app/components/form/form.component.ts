@@ -28,5 +28,6 @@ export class FormComponent implements OnInit {
   onSubmit(){
     this.addNewCita(this.profileForm.value)
     console.warn(this.profileForm.value)
+    console.log("Corre OnSubmit")
   }
 }

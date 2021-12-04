@@ -1,3 +1,13 @@
+<swal
+  #success
+  title="Exito!"
+  text="Has iniciado Sesion"
+  icon="success"
+  [showCancelButton]="true"
+  [focusCancel]="true"
+>
+</swal>
+
 <div class="container section is-medium">
   <div class="field">
     <label class="label">Usuario</label>
@@ -11,7 +21,5 @@
       <input class="input" type="text" placeholder="Contraseña" />
     </div>
   </div>
-  <button class="button" [swal]="['Exito!', 'Bienvenido', 'success']">
-    Inciar Sesion
-  </button>
+  <button class="button" (click)="success.fire()">Inciar Sesion</button>
 </div>

@@ -1,3 +1,13 @@
+<swal
+  #success
+  title="Exito!"
+  text="Se agendo la cita"
+  icon="success"
+  [showCancelButton]="true"
+  [focusCancel]="true"
+>
+</swal>
+
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <div class="container section is-medium">
     <div class="field">
@@ -37,7 +47,7 @@
       class="button"
       type="submit"
       [disabled]="!profileForm.valid"
-      [swal]="['Exito!', 'Has Sido Registrado', 'success']"
+      (click)="success.fire()"
     >
       Registrar
     </button>
