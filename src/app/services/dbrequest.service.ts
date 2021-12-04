@@ -8,7 +8,7 @@ import { Citas } from "../../app/models/cita.intrerface";
   providedIn: 'root'
 })
 export class DbrequestService {
-  baseUrl = "http://localhost:3000"
+  baseUrl = "https://morning-anchorage-41470.herokuapp.com"
 
   constructor(private http: HttpClient) { }
 
